@@ -22,6 +22,7 @@ int main(void) {
     unsigned char tmpA = 0x00; // Temporary variable to hold the value of A
 while(1) {
 	tmpA = PINA;
+	tmpA = tmpA & 0x03;
         // if PA0 is 1, set PB1PB0 = 01, else = 10
         if (tmpA == 0x01) { // True if PA0 is 1
             tmpB = (tmpB & 0x00) | 0x1;
